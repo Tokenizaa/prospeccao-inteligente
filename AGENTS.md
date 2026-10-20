@@ -16,10 +16,10 @@ Executar um pipeline reutilizável de prospecção e qualificação de leads com
 ## Stack padrão
 
 - Consultar [docs/tech-stack.md](docs/tech-stack.md) antes de definir tecnologias.
-- Padrão inicial: instruções e skills em Markdown, harness já disponível, Playwright MCP para navegação quando autorizado e arquivos locais para evidências, decisões e resultados.
-- Não criar backend, SaaS, banco de dados, API, ORM, sistema de scraping pago ou painel próprio na primeira versão sem requisito concreto.
-- TypeScript/Node.js só deve entrar quando scripts determinísticos forem realmente necessários.
-- Não exigir provedor de IA específico. Usar o modelo já disponível no harness, quando adequado.
+- O produto em produção deve ser uma aplicação independente na Cloudflare: TypeScript, Cloudflare Workers e D1 como base inicial.
+- Consultar [docs/tech-stack.md](docs/tech-stack.md) para a arquitetura alvo; considerar Queues, Browser Run, Workers AI/API de IA e R2 conforme necessidade e custos.
+- OpenCode, Claude Code e outros harnesses são ferramentas opcionais de desenvolvimento, nunca dependências de runtime do produto.
+- Não adicionar CRM externo, scraping pago, ORM, microserviços ou framework pesado sem necessidade concreta.
 
 ## Regras operacionais
 
