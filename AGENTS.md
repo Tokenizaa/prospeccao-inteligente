@@ -16,7 +16,7 @@ Implementar módulos reutilizáveis de prospecção, geração e qualificação 
 ## Regras operacionais
 
 - Ler o README e os documentos relevantes antes de implementar.
-- Não assumir framework, banco, hospedagem, gateway, provedor de IA ou ferramenta de agente.
+- Consultar [docs/tech-stack.md](docs/tech-stack.md) antes de definir tecnologias. O padrão recomendado para módulo novo é TypeScript + Node.js LTS + Zod + Vitest, mas não é uma stack já implementada nem uma imposição sobre produtos existentes.\n- Não assumir framework, banco, hospedagem, gateway, provedor de IA ou ferramenta de agente: inspecionar o projeto hospedeiro e justificar desvios ou dependências adicionais.
 - Não tratar um plano, uma análise ou um commit como prova de funcionamento.
 - Não inventar fontes, leads, campos, resultados de teste, permissões ou estado de produção.
 - Não expor chaves, tokens, dados pessoais ou segredos em logs, commits ou exemplos.
