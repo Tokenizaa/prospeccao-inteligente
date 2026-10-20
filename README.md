@@ -2,7 +2,7 @@
 
 Biblioteca pública e versionada de instruções e skills para agentes de IA executarem um pipeline **local de prospecção, qualificação de leads e produção de demonstrações comerciais**.
 
-O padrão inicial é agent-first/local-first: instruções Markdown, harness de agente, Playwright MCP para navegação e arquivos locais para evidências e resultados. Não exige backend próprio, banco de dados, scraping pago ou SaaS na primeira versão. O repositório ainda é documentação; o pipeline executável precisa ser implementado.
+O produto-alvo é uma aplicação independente na Cloudflare, com TypeScript, Workers e D1 como base. Não depende de OpenCode ou outro harness em produção. O repositório contém documentação e especificações; o pipeline executável ainda precisa ser implementado.
 
 ## Objetivos
 
