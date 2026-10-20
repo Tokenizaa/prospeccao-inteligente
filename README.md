@@ -1,8 +1,8 @@
 # Prospecção Inteligente
 
-Biblioteca pública e versionada de instruções, padrões e contratos para agentes de IA implementarem módulos de **prospecção, geração e qualificação de leads** em diferentes produtos digitais.
+Biblioteca pública e versionada de instruções e skills para agentes de IA executarem um pipeline **local de prospecção, qualificação de leads e produção de demonstrações comerciais**.
 
-O repositório é uma fonte de instruções reutilizáveis — não é, por si só, um plugin, CRM ou aplicação executável.
+O padrão inicial é agent-first/local-first: instruções Markdown, harness de agente, Playwright MCP para navegação e arquivos locais para evidências e resultados. Não exige backend próprio, banco de dados, scraping pago ou SaaS na primeira versão. O repositório ainda é documentação; o pipeline executável precisa ser implementado.
 
 ## Objetivos
 
@@ -25,7 +25,8 @@ As instruções são independentes de ferramenta e podem ser consumidas por Open
 
 ## Conteúdo
 
-- [Stack tecnológica recomendada](docs/tech-stack.md) — linguagem, runtime, bibliotecas e critérios de escolha\n- [Arquitetura](docs/architecture.md)
+- [Stack tecnológica recomendada](docs/tech-stack.md) — linguagem, runtime, bibliotecas e critérios de escolha\n- [Stack tecnológica e arquitetura padrão](docs/tech-stack.md)
+- [Arquitetura](docs/architecture.md)
 - [Contrato de integração API-first](docs/integration-contract.md)
 - [Segurança e privacidade](docs/security.md)
 - [Sistema de design](docs/design-system.md)
