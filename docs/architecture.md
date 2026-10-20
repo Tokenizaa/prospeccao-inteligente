@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Orientar um pipeline agent-first e local-first: instruções versionadas executadas pelo harness existente, navegação assistida por Playwright MCP quando permitida e arquivos locais para registrar evidências e resultados. Não criar backend, banco ou interface própria antes de haver requisito concreto.
+Orientar uma aplicação independente na Cloudflare: TypeScript e Workers para API e coordenação, D1 para estado relacional, processamento assíncrono com Queues/Workflows quando necessário, Browser Run para navegação automatizada permitida e um adaptador de IA substituível. Harnesses de desenvolvimento não fazem parte do runtime de produção.
 
 ## Capacidades lógicas
 
