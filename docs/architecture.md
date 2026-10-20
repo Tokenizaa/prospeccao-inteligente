@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Orientar módulos de prospecção reutilizáveis sem impor uma stack. A implementação concreta deve se adaptar ao produto hospedeiro, preservando seus padrões e contratos válidos.
+Orientar um pipeline agent-first e local-first: instruções versionadas executadas pelo harness existente, navegação assistida por Playwright MCP quando permitida e arquivos locais para registrar evidências e resultados. Não criar backend, banco ou interface própria antes de haver requisito concreto.
 
 ## Capacidades lógicas
 
