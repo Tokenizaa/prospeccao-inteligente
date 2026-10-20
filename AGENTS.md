@@ -1,35 +1,43 @@
 # Instruções para agentes
 
-Este arquivo é a entrada canônica para qualquer agente ou harness que trabalhe com esta biblioteca ou a aplique a um produto.
+Este arquivo é a entrada canônica para qualquer agente ou harness que use esta biblioteca.
 
 ## Objetivo
 
-Implementar módulos reutilizáveis de prospecção, geração e qualificação de leads com IA, configuráveis por segmento e integráveis a diferentes produtos por contratos claros.
+Executar um pipeline reutilizável de prospecção e qualificação de leads com IA, com opção de produzir demonstrações comerciais após aprovação humana.
 
-## Regra obrigatória: entender, preservar, melhorar, validar
+## Princípio obrigatório: entender, preservar, melhorar, validar
 
-1. **ENTENDER** — inspecionar o repositório, instruções existentes, arquitetura, fluxos, dados, integrações, autenticação, testes e estado de deploy. Separar fatos verificados de hipóteses.
-2. **PRESERVAR** — manter comportamentos, contratos, dados, padrões e decisões válidas. Não apagar, recriar ou migrar sem necessidade demonstrada e plano de reversão.
-3. **MELHORAR** — implementar a menor mudança completa que resolva o problema real. Evitar duplicar páginas, menus, serviços, abstrações ou configurações.
-4. **VALIDAR** — executar verificações proporcionais à mudança e testar o caminho real de uso. Informar exatamente o que passou, falhou, não foi executado e por quê.
+1. **ENTENDER** — ler o README e os documentos relevantes; inspecionar o ambiente e separar fatos de hipóteses.
+2. **PRESERVAR** — não substituir ferramentas, dados ou fluxos válidos sem necessidade demonstrada.
+3. **MELHORAR** — implementar a menor solução completa; evitar arquitetura e dependências desnecessárias.
+4. **VALIDAR** — verificar o fluxo real e relatar exatamente o que foi e não foi testado.
+
+## Stack padrão
+
+- Consultar [docs/tech-stack.md](docs/tech-stack.md) antes de definir tecnologias.
+- Padrão inicial: instruções e skills em Markdown, harness já disponível, Playwright MCP para navegação quando autorizado e arquivos locais para evidências, decisões e resultados.
+- Não criar backend, SaaS, banco de dados, API, ORM, sistema de scraping pago ou painel próprio na primeira versão sem requisito concreto.
+- TypeScript/Node.js só deve entrar quando scripts determinísticos forem realmente necessários.
+- Não exigir provedor de IA específico. Usar o modelo já disponível no harness, quando adequado.
 
 ## Regras operacionais
 
-- Ler o README e os documentos relevantes antes de implementar.
-- Consultar [docs/tech-stack.md](docs/tech-stack.md) antes de definir tecnologias. O padrão recomendado para módulo novo é TypeScript + Node.js LTS + Zod + Vitest, mas não é uma stack já implementada nem uma imposição sobre produtos existentes.\n- Não assumir framework, banco, hospedagem, gateway, provedor de IA ou ferramenta de agente: inspecionar o projeto hospedeiro e justificar desvios ou dependências adicionais.
-- Não tratar um plano, uma análise ou um commit como prova de funcionamento.
-- Não inventar fontes, leads, campos, resultados de teste, permissões ou estado de produção.
+- Não qualificar um lead apenas pela ausência de site. Exigir evidências de oportunidade comercial e registrar sinais contrários.
+- Registrar fontes e datas de consulta; não inventar dados, fontes ou resultados.
+- Solicitar aprovação humana antes de gerar uma demonstração ou preparar uma abordagem específica para um lead.
+- Não enviar mensagens nem publicar demonstrações automaticamente por padrão.
+- Respeitar termos das fontes, limites de acesso, privacidade e legislação aplicável. Não contornar autenticação, CAPTCHA, paywalls ou proteções.
+- Não presumir que imagens, vídeos, avaliações ou marcas de terceiros podem ser copiados e republicados.
 - Não expor chaves, tokens, dados pessoais ou segredos em logs, commits ou exemplos.
-- Preferir APIs explícitas, contratos versionados e configuração por segmento.
-- Não introduzir dependências ou infraestrutura sem justificar necessidade e custo.
-- Não fazer alterações destrutivas nem operações externas irreversíveis sem autorização.
-- Se houver bloqueio, concluir tudo que for possível com segurança e registrar o bloqueio específico, sem declarar a tarefa concluída.
-- Documentar decisões que afetem arquitetura, segurança, compatibilidade ou dados.
+- Não realizar alterações destrutivas ou operações externas irreversíveis sem autorização.
+- Se houver bloqueio, concluir o que for possível com segurança e declarar o bloqueio específico.
+- Não tratar plano, análise ou commit como prova de funcionamento.
 
 ## Independência de ferramenta
 
-Estas instruções não exigem OpenCode, Claude Code, Google AI Studio ou qualquer harness específico. Use os recursos disponíveis no ambiente e respeite suas permissões reais.
+OpenCode é um ambiente de referência, não uma dependência obrigatória. As instruções devem poder ser adaptadas a outros harnesses que suportem arquivos de instrução, ferramentas e navegação.
 
 ## Relato final obrigatório
 
-Informe: objetivo concluído; arquivos e contratos alterados; validações executadas e resultados; riscos ou pendências; commit ou referência verificável. Nunca declarar testes não executados como aprovados.
+Informar objetivo concluído, arquivos alterados, validações executadas, resultados, riscos, pendências e referência verificável. Nunca declarar testes não executados como aprovados.
