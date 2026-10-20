@@ -25,7 +25,7 @@ As instruções são independentes de ferramenta e podem ser consumidas por Open
 
 ## Conteúdo
 
-- [Arquitetura](docs/architecture.md)
+- [Stack tecnológica recomendada](docs/tech-stack.md) — linguagem, runtime, bibliotecas e critérios de escolha\n- [Arquitetura](docs/architecture.md)
 - [Contrato de integração API-first](docs/integration-contract.md)
 - [Segurança e privacidade](docs/security.md)
 - [Sistema de design](docs/design-system.md)
